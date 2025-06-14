@@ -12,7 +12,7 @@
     <div id="header">
         <div class="container">
             <nav>
-                <img src="images/logo.png" class="logo">
+                <img src="images/logo1.png" class="logo">
                 <ul class="info">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About</a></li>
@@ -22,24 +22,108 @@
 
                 </ul>
             </nav>
-            <div class="skill">
-                <h1>I'm a <span class="auto-type"></span></h1>
-                <br>
-                <p>I design sleek, user-friendly interfaces and
-                    bring
-                    them </p>
-                <p>to life
-                    with clean, responsive code.</p>
-
-
+            <div class="main">
+                <div class="skill">
+                    <h1>I'm a <span class="auto-type"></span></h1>
+                    <br>
+                    <p>I design sleek, user-friendly interfaces and
+                        bring
+                        them to life
+                        with clean, responsive code.</p>
+                </div>
+                <div class="bgimg">
+                    <img src="images/background1.png" alt="">
+                </div>
             </div>
 
         </div>
-
     </div>
+    <!-- about section -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/user1.png" alt="">
+                </div>
+
+                <div class="about-col-2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, unde doloremque minus quasi
+                        velit laudantium eos dolores deleniti consequuntur ad aperiam fugit maiores qui, quas ea in
+                        accusantium, ratione nisi dolore eaque repellat voluptas reprehenderit? Nemo sunt numquam
+                        architecto nam iure quisquam sed facere? Excepturi!</p>
+                    <div class="tab-titles">
+                        <p class="tab-link active-link " onclick="opentab('skills')">Skills</p>
+                        <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-link" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                            <li><span>Web Development</span><br>Web App Development</li>
+                            <li><span>App Development</span><br>Building IOS/Android App</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2023-present</span><br>Software Developer at PYQ firm</li>
+                            <li><span>2022-2023</span><br>UI/UX Design Executive at ABC Firm</li>
+                            <li><span>2021-2022</span><br>Intern at XYZ firm</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2020-2021</span><br>MBA at IIM Bangalore</li>
+                            <li><span>2016-2020</span><br>B.Tech Computer Science from SNU</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!-- 
+    services(under about only) -->
+
+    <div id="services">
+        <div class="container">
+            <div class="services-list">
+                <div>
+                    <h2>Web Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam, nesciunt accusamus nihil magnam molestias.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>UI/UX Design</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam, nesciunt accusamus nihil magnam molestias.</p>
+                    <a href="#">learn more</a>
+                </div>
+                <div>
+                    <h2>Full Stack</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam, nesciunt accusamus nihil magnam molestias.</p>
+                    <a href="#">learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="typedAnimation.js"></script>
-
+    <script>
+        var tablink = document.getElementsByClassName("tab-link");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(x of tablink){
+                x.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
 </body>
 
 </html>
