@@ -7,43 +7,57 @@
 }
 
 body {
-    background: black;
-    color: #fff;
+    background-color: #F5F5F5;
 
 }
 
 #header {
     width: 100%;
     height: 100vh;
-    background-color: black;
-    background-image: url(images/background2-removebg-preview.png);
-    background-size: contain;
-    background-position: right;
-    background-repeat: no-repeat;
+    /*overflow: hidden;*/
+    position: relative;
 
 }
 
-#name {
+.main {
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    font-family: 'Huninn';
-    font-size: 30px;
-
+    height: 100vh;
 }
 
+.bgimg {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
 
+.bgimg img {
+    height: 90vh;
+    width: auto;
+    object-fit: contain;
+}
 
+.logo {
+    width: 200px;
+    margin-left: 10%;
+
+}
 
 ul {
-
     list-style: none;
+}
+
+nav ul {
+    margin-right: 10%;
 
 
 }
 
 .info li a {
     text-decoration: none;
-    color: #896790;
+    color: black;
     font-size: 18px;
     position: relative;
 
@@ -53,12 +67,11 @@ ul {
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
-
 
 }
 
@@ -69,55 +82,200 @@ ul {
 nav {
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
-    height: 20%;
+    position: sticky;
+    background-color:
+        /* #F6DFEB*/
+        #D0BFFF;
+
 
 
 }
 
 
-
-
 .info {
-
     flex: 0.5;
     display: flex;
     justify-content: space-around;
     align-items: center;
 
-
-
-
-
 }
-
-
 
 .auto-type {
-    color: #896790;
+    color: #BEADFA;
 }
 
-#skill {
+.skill {
     margin-left: 10%;
 }
 
-.container {
+.navigation {
     height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.skill p {
+    text-transform: capitalize;
+    font-size: 20px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+/* about section */
+#about {
+    padding: 80px;
+
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    border-radius: 15px;
+    width: 100%;
+}
+
+.about-col-2 {
+    flex-basis: 60%;
+}
+
+.subtitle {
+    color: black;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 60px;
+    font-weight: 600;
+}
+
+
+.tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-link {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background-color: #BEADFA;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+    width: 100%;
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin-bottom: 20px;
 
 
 
 
 }
 
-p {
-    text-transform: capitalize;
+.tab-contents ul li span {
+    color: #BEADFA;
     font-size: 20px;
-    max-width: 50%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    color: #896790;
+
+
+
+
+}
+
+.tab-contents {
+    display: none;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#services {
+    padding: 0px 90px 30px 90px;
+}
+
+.services-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 60px;
+    margin-top: 30px;
+}
+
+.services-list div {
+    background-color: #D0BFFF;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    box-sizing: 30px;
+
+    transition: background 0.5s, transform 0.5s;
+}
+
+.services-list div h2 {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.services-list div a {
+    text-decoration: none;
+    color: currentColor;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+    transition: color .5s;
+}
+
+.services-list div:hover {
+    background-color: #DFCCFB;
+    color: rgb(115, 70, 123);
+    transform: translateY(-10px);
+}
+
+.contact {
+    display: flex;
+
+    justify-content: center;
+
+    height: 80vh;
+    margin: 50px;
+}
+
+.container-left {
+    display: flex;
+    flex-direction: column;
+    margin: 50px;
+}
+
+.container-right {
+    margin: 50px;
+}
+
+#msg {
+    height: 150px;
+    resize: vertical;
 }
