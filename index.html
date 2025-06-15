@@ -6,180 +6,125 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="style.css">
-    <!---
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Huninn&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-
 </head>
-
 
 <body>
     <div id="header">
-        <div class="navigation">
-            <nav>
-                <img src="images/logo1.png" class="logo">
-                <ul class="info">
-                    <li><a href="#">HOME</a></li>
-                    <li><a href="#">ABOUT</a></li>
+        <nav class="navigation">
+            <img src="images/logo1.png" class="logo">
+            <ul class="info">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
 
-                    <li><a href="#">CONTACT</a></li>
-
-                </ul>
-            </nav>
-            <div class="main">
-                <div class="skill">
-                    <h1>I'm a <span class="auto-type"></span></h1>
-                    <br>
-                    <p>I design sleek, user-friendly interfaces and
-                        bring
-                        them to life
-                        with clean, responsive code.</p>
-
-                </div>
-                <div class="bgimg">
-                    <img src="images/background1.png" alt="">
-                </div>
+        <div id="home" class="main">
+            <div class="skill">
+                <h1>I'm a <span class="auto-type"></span></h1>
+                <p>I design sleek, user-friendly interfaces and bring them to life with clean, responsive code.</p>
             </div>
-
+            <div class="bgimg">
+                <img src="images/background1.png" alt="">
+            </div>
         </div>
     </div>
 
-
-
-    <!-- about section -->
     <div id="about">
-        <div>
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="images/user1.png" alt="">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="subtitle">About Me</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Praesentium, nisi aspernatur nobis
+                    voluptatem expedita rem iste ut, provident nam esse consequatur eius tenetur amet error?</p>
+
+                <div class="tab-titles">
+                    <p class="tab-link active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-link" onclick="opentab('education')">Education</p>
                 </div>
 
-                <div class="about-col-2">
-                    <h1 class="subtitle">About Me</h1>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Libero, unde doloremque
-                        minus quasi
-                        velit laudantium eos dolores deleniti consequuntur ad aperiam fugit maiores qui,
-                        quas ea in
-                        accusantium, ratione nisi dolore eaque repellat voluptas reprehenderit? Nemo
-                        sunt numquam
-                        architecto nam iure quisquam sed facere? Excepturi!</p>
-                    <div class="tab-titles">
-                        <p class="tab-link active-link " onclick="opentab('skills')">Skills</p>
-                        <p class="tab-link" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-link" onclick="opentab('education')">Education</p>
-                    </div>
-
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
-                            <li><span>Web Development</span><br>Web App Development</li>
-                            <li><span>App Development</span><br>Building IOS/Android App</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2023-present</span><br>Software Developer at PYQ firm</li>
-                            <li><span>2022-2023</span><br>UI/UX Design Executive at ABC Firm</li>
-                            <li><span>2021-2022</span><br>Intern at XYZ firm</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2020-2021</span><br>MBA at IIM Bangalore</li>
-                            <li><span>2016-2020</span><br>B.Tech Computer Science from SNU</li>
-                        </ul>
-                    </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>UI/UX</span><br>Designing Web/App Interfaces</li>
+                        <li><span>Web Development</span><br>Web App Development</li>
+                        <li><span>App Development</span><br>Building IOS/Android App</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2023-present</span><br>Software Developer at PYQ firm</li>
+                        <li><span>2022-2023</span><br>UI/UX Executive at XYZ Firm</li>
+                        <li><span>2021-2022</span><br>Intern at ABC Firm</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020-2021</span><br>MBA at IIM Bangalore</li>
+                        <li><span>2016-2020</span><br>B.Tech Computer Science at SNU</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
-    <!-- 
-    services(under about only) -->
 
     <div id="services">
-        <div>
-            <div class="services-list">
-                <div>
-                    <h2>Web Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam,
-                        nesciunt accusamus
-                        nihil magnam molestias.</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <h2>UI/UX Design</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam,
-                        nesciunt accusamus
-                        nihil magnam molestias.</p>
-                    <a href="#">learn more</a>
-                </div>
-                <div>
-                    <h2>Full Stack</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia laboriosam,
-                        nesciunt accusamus
-                        nihil magnam molestias.</p>
-                    <a href="#">learn more</a>
-                </div>
+        <div class="services-list">
+            <div>
+                <h2>Web Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo tempora ad enim quis veniam natus.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>UI/UX Design</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis maiores culpa numquam similique
+                    facere ipsa rerum corrupti recusandae.</p>
+                <a href="#">learn more</a>
+            </div>
+            <div>
+                <h2>Full Stack</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa a officiis voluptas totam assumenda.
+                    Facilis, impedit.</p>
+                <a href="#">learn more</a>
             </div>
         </div>
     </div>
 
-
-
-    <script>
-        var tablink = document.getElementsByClassName("tab-link");
-        var tabcontents = document.getElementsByClassName("tab-contents");
-        function opentab(tabname) {
-            for (x of tablink) {
-                x.classList.remove("active-link");
-            }
-            for (tabcontent of tabcontents) {
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
-    </script>
-
-    <!------------------------CONTACT---------------------------------->
-
-    <div class="contact">
+    <div id="contact" class="contact">
         <div class="container-left">
             <h1>CONTACT ME</h1>
-
-
-            <p><span><i class="fa-solid fa-envelope"></i></span> contact@example.com</p>
-            <p><span><i class="fa-solid fa-phone"></i></span> 0123456789</p>
-
-
+            <p><i class="fa-solid fa-envelope"></i> contact@example.com</p>
+            <p><i class="fa-solid fa-phone"></i> 0123456789</p>
             <div id="contact-icons">
                 <a href=""><i class="fa-brands fa-github"></i></a>
                 <a href=""><i class="fa-brands fa-linkedin"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
             </div>
         </div>
-
         <div class="container-right">
-
-
+            <form>
+                <input type="text" placeholder="Name">
+                <input type="email" placeholder="Email Address">
+                <textarea placeholder="Your Message"></textarea>
+            </form>
         </div>
-
     </div>
 
-
-
-
+    <script>
+        function opentab(tabname) {
+            let tablink = document.getElementsByClassName("tab-link");
+            let tabcontents = document.getElementsByClassName("tab-contents");
+            for (let x of tablink) x.classList.remove("active-link");
+            for (let tabcontent of tabcontents) tabcontent.classList.remove("active-tab");
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="typedAnimation.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
