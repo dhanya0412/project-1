@@ -6,12 +6,17 @@
 }
 
 body {
-    background-color: #2a042e;
+    background-color:
+        #2a042e;
     color: white;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+#header {
+    height: 100vh;
 }
 
 nav.navigation {
@@ -20,6 +25,22 @@ nav.navigation {
     align-items: center;
     padding: 20px 10%;
     background-color: rgba(255, 255, 255, 0.2);
+    height: 10%;
+    width: 100%;
+    margin-bottom: 30px;
+    animation: nav-load 300ms;
+
+}
+
+@keyframes nav-load {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+
 }
 
 .logo {
@@ -84,6 +105,7 @@ ul.info li a:hover::after {
 .bgimg img {
     height: 90vh;
     object-fit: contain;
+
 }
 
 #about {
