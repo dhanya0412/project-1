@@ -2,11 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Josefin Sans', sans-serif;
+
 }
 
 body {
-    background-color: #00001c;
+    background-color: #F4F4FA;
     color: white;
 }
 
@@ -25,7 +26,7 @@ nav.navigation {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    /*position: sticky;*/
+    position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #171736;
@@ -50,11 +51,13 @@ nav.navigation:hover {
 
 .logo {
     width: 150px;
+
 }
 
 ul.info {
     display: flex;
-    gap: 30px;
+
+    gap: 50px;
     list-style: none;
 }
 
@@ -125,7 +128,7 @@ ul.info li a:hover::after {
 
     font-size: 40px;
     margin-bottom: 20px;
-    color: white;
+    color: #00001c;
 }
 
 .skill #myName {
@@ -134,13 +137,14 @@ ul.info li a:hover::after {
 }
 
 .skill span {
-    color: #DFCCFB;
+    color: #2D2D53;
 }
 
 .skill p {
     font-size: 20px;
     margin-top: 10px;
     line-height: 1.5;
+    color: #00001c;
 }
 
 .auto-type {
@@ -179,9 +183,12 @@ ul.info li a:hover::after {
     min-width: 300px;
 }
 
+
+
 .about-col-1 img {
     width: 79%;
     border-radius: 10px;
+
 }
 
 .subtitle {
@@ -239,6 +246,12 @@ ul.info li a:hover::after {
     padding: 40px 10%;
 }
 
+#services h1 {
+    text-align: center;
+    margin-bottom: 50px;
+    color: #00001c;
+}
+
 .services-list {
     display: flex;
     flex-wrap: wrap;
@@ -247,31 +260,39 @@ ul.info li a:hover::after {
 }
 
 .services-list div {
-    background: #DEDEED;
+    background: #DFCCFB;
     color: #2a042e;
     padding: 30px;
     border-radius: 8px;
     flex: 1;
     min-width: 250px;
     transition: 0.3s;
+    animation: appear 20s linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 30%;
+
+
 }
 
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
 
 .services-list div:hover {
-    background: #DFCCFB;
+    background: #DEDEED;
     transform: translateY(-8px);
 }
 
 
-@keyframes rotBGimg {
-    from {
-        transform: rotate(0deg);
-    }
-
-    to {
-        transform: rotate(360deg);
-    }
-}
 
 .services-list div h2 {
     text-align: center;
@@ -290,10 +311,13 @@ ul.info li a:hover::after {
     flex-direction: column;
     gap: 40px;
     padding: 50px 10%;
+    color: #2D2D53;
 }
 
+
+
 .contact h1 {
-    color: #DFCCFB;
+    color: #171736;
 }
 
 @media (min-width: 768px) {
@@ -307,7 +331,7 @@ ul.info li a:hover::after {
         font-size: 30px;
     }
 
-    .navigation li:nth-of-type(4) {
+    .navigation li:nth-of-type(5) {
         display: none;
 
     }
@@ -318,14 +342,22 @@ ul.info li a:hover::after {
         justify-content: center;
     }
 
-    .navigation li:nth-of-type(4) {
+
+
+    .navigation li:nth-of-type(5) {
         display: flex;
 
+    }
+
+    .about-col-1 {
+        display: flex;
+        justify-content: center;
     }
 
     .about-col-1 img {
         width: 50%;
         height: 90%;
+
 
     }
 
@@ -384,7 +416,7 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
-    background: #171736;
+    background: #DEDEED;
     color: white;
     padding: 10px;
     border: 1px solid #47476B;
@@ -399,9 +431,9 @@ textarea {
 
 form button {
     border: none;
-    background-color: #DFCCFB;
+    background-color: #2D2D53;
     padding: 12px;
-    color: #2a042e;
+    color: white;
     font-weight: 550;
     border-radius: 15px;
     height: 5vh;
@@ -412,12 +444,13 @@ form button {
 }
 
 form button:hover {
-    background-color: #DEDEED;
+    background-color: #DFCCFB;
+    color: #2D2D53;
 }
 
 #contact-icons a {
     margin-right: 15px;
-    color: white;
+    color: #2D2D53;
     font-size: 20px;
     transition: color 0.3s;
 }
@@ -529,6 +562,7 @@ form button:hover {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: #00001c;
+    background-color: #F4F4FA;
+
     z-index: -2;
 }
