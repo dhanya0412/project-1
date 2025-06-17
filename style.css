@@ -25,7 +25,7 @@ nav.navigation {
     justify-content: space-between;
     align-items: center;
     padding: 20px 10%;
-    /*position: sticky;*/
+    position: sticky;
     top: 0;
     z-index: 1000;
     background-color: #171736;
@@ -247,8 +247,8 @@ ul.info li a:hover::after {
 }
 
 .services-list div {
-    background: #DEDEED;
-    color: #2a042e;
+    background: #c0c0d7;
+    color: #00001c;
     padding: 30px;
     border-radius: 8px;
     flex: 1;
@@ -258,7 +258,7 @@ ul.info li a:hover::after {
 
 
 .services-list div:hover {
-    background: #DFCCFB;
+    background: #d1b2ff;
     transform: translateY(-8px);
 }
 
