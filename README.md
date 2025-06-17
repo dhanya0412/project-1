@@ -7,3 +7,13 @@ index.html : Main HTML file <br>
 style.css : Stylesheet for design and responsiveness <br>
 typedAnimation.js : Script for dynamic typing animation<br>
 images/ : Folder for all personal images like logos and user images
+
+## Features
+
+- **Responsive Design**: Optimized for desktop and mobile screens.
+- **Animated Navigation Bar**: Glow effect on hover and sticky scrolling.
+- **Intro Section**: Features a typing animation for dynamic titles using [Typed.js](https://github.com/mattboldt/typed.js/).
+- **About Section**: Tabbed layout to display skills, experience, and education.
+- **Services Section**: Highlight services with subtle animation effects.
+- **Contact Form**: Submits user input to Google Sheets using Google Apps Script.
+- **Footer**: Includes social icons and navigation links.
