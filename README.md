@@ -3,10 +3,10 @@
 This is a responsive personal portfolio website designed to showcase skills, experience, services, and contact details in an elegant and modern layout. It’s built with HTML, CSS, and JavaScript and includes subtle animations and interactions.
 
 ## Project Structure
-index.html : Main HTML file <br>
-style.css : Stylesheet for design and responsiveness <br>
-typedAnimation.js : Script for dynamic typing animation<br>
-images/ : Folder for all personal images like logos and user images
+-index.html : Main HTML file <br>
+-style.css : Stylesheet for design and responsiveness <br>
+-typedAnimation.js : Script for dynamic typing animation<br>
+-images/ : Folder for all personal images like logos and user images
 
 ## Features
 
@@ -17,3 +17,12 @@ images/ : Folder for all personal images like logos and user images
 - **Services Section**: Highlight services with subtle animation effects.
 - **Contact Form**: Submits user input to Google Sheets using Google Apps Script.
 - **Footer**: Includes social icons and navigation links.
+
+## Technologies Used
+
+- HTML5
+- CSS3 (with media queries for responsiveness)
+- JavaScript
+- [Typed.js](https://github.com/mattboldt/typed.js) for animated text
+- Font Awesome for icons
+- Google Fonts (`Josefin Sans`, `Raleway`)
