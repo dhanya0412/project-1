@@ -12,22 +12,22 @@
 <body>
   <div id="header">
     <nav class="navigation-sidebar">
-      <a onClick=hideSidebar()><i class="fa-solid fa-xmark"></i></a>
-      <img src="images/logo1.png" class="logo">
+      <a class="toggle" onClick=hideSidebar()><i class="fa-solid fa-xmark"></i></a>
+      <!--<img src="images/logo1.png" class="logo">-->
 
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a class="toggle" href="#home">Home</a>
+      <a class="toggle" href="#about">About</a>
+      <a class="toggle" href="#contact">Contact</a>
 
 
     </nav>
     <nav class="navigation">
       <img src="images/logo1.png" class="logo">
       <ul class="info">
-        <li class="hideOnMobile"><a href="#home">Home</a></li>
-        <li class="hideOnMobile"><a href="#about">About</a></li>
-        <li class="hideOnMobile"><a href="#contact">Contact</a></li>
-        <li onClick=openSidebar()><i class="fa-solid fa-bars"></i></li>
+        <li class="hideOnMobile "><a href="#home">Home</a></li>
+        <li class="hideOnMobile "><a href="#about">About</a></li>
+        <li class="hideOnMobile "><a href="#contact">Contact</a></li>
+        <li class="toggle" onClick=openSidebar()><i class="fa-solid fa-bars"></i></li>
       </ul>
     </nav>
     <script>
@@ -40,6 +40,7 @@
       function openSidebar() {
         const sidebar = document.querySelector('.navigation-sidebar');
         sidebar.style.display = 'flex';
+
       }
     </script>
 
@@ -47,6 +48,7 @@
 
     <div id="home" class="main">
       <div class="skill">
+        <h1 id="myName">Hi! It's <span>TINA</span></h1>
         <h1>I'm a <span class="auto-type"></span></h1>
         <p>I design sleek, user-friendly interfaces and bring them to life with clean, responsive code.</p>
       </div>

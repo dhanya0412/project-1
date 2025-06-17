@@ -6,8 +6,8 @@
 }
 
 body {
-    background-color: rgb(243, 231, 254);
-    color: #e0aaff;
+    background-color: #00001c;
+    color: white;
 }
 
 html {
@@ -28,7 +28,7 @@ nav.navigation {
     /*position: sticky;*/
     top: 0;
     z-index: 1000;
-    background-color: #B57EDC;
+    background-color: #171736;
 
     /*backdrop-filter: blur(8px);*/
     margin-bottom: 20px;
@@ -56,6 +56,15 @@ ul.info {
     display: flex;
     gap: 30px;
     list-style: none;
+}
+
+.toggle {
+    cursor: pointer;
+
+}
+
+.toggle:hover {
+    color: #DFCCFB;
 }
 
 ul.info li a {
@@ -115,7 +124,17 @@ ul.info li a:hover::after {
 .skill h1 {
 
     font-size: 40px;
-    color: #BEADFA;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.skill #myName {
+    font-size: 45px;
+
+}
+
+.skill span {
+    color: #DFCCFB;
 }
 
 .skill p {
@@ -125,7 +144,8 @@ ul.info li a:hover::after {
 }
 
 .auto-type {
-    color: #f06bff;
+    color: #DFCCFB;
+    font-size: 42px;
 }
 
 .bgimg img {
@@ -144,7 +164,7 @@ ul.info li a:hover::after {
     padding: 60px 10%;
     position: relative;
     z-index: 1;
-    background-color: #2a042e;
+    background-color: #00001c;
 }
 
 .row {
@@ -167,7 +187,7 @@ ul.info li a:hover::after {
 .subtitle {
     font-size: 40px;
     margin-bottom: 20px;
-    color: #BEADFA;
+    color: #DFCCFB;
 }
 
 .tab-titles {
@@ -211,7 +231,7 @@ ul.info li a:hover::after {
 }
 
 .tab-contents ul li span {
-    color: #BEADFA;
+    color: #DFCCFB;
     font-weight: bold;
 }
 
@@ -227,7 +247,7 @@ ul.info li a:hover::after {
 }
 
 .services-list div {
-    background: #BEADFA;
+    background: #DEDEED;
     color: #2a042e;
     padding: 30px;
     border-radius: 8px;
@@ -236,9 +256,21 @@ ul.info li a:hover::after {
     transition: 0.3s;
 }
 
+
 .services-list div:hover {
     background: #DFCCFB;
     transform: translateY(-8px);
+}
+
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .services-list div h2 {
@@ -261,7 +293,7 @@ ul.info li a:hover::after {
 }
 
 .contact h1 {
-    color: #BEADFA;
+    color: #DFCCFB;
 }
 
 @media (min-width: 768px) {
@@ -274,11 +306,21 @@ ul.info li a:hover::after {
     .skill h1 {
         font-size: 30px;
     }
+
+    .navigation li:nth-of-type(4) {
+        display: none;
+
+    }
 }
 
 @media (max-width: 768px) {
     .row {
         justify-content: center;
+    }
+
+    .navigation li:nth-of-type(4) {
+        display: flex;
+
     }
 
     .about-col-1 img {
@@ -342,10 +384,10 @@ form {
 input[type="text"],
 input[type="email"],
 textarea {
-    background: #2a042e;
+    background: #171736;
     color: white;
     padding: 10px;
-    border: 1px solid #BEADFA;
+    border: 1px solid #47476B;
     border-radius: 6px;
     width: 100%;
 }
@@ -357,7 +399,7 @@ textarea {
 
 form button {
     border: none;
-    background-color: #BEADFA;
+    background-color: #DFCCFB;
     padding: 12px;
     color: #2a042e;
     font-weight: 550;
@@ -370,7 +412,7 @@ form button {
 }
 
 form button:hover {
-    background-color: #DFCCFB;
+    background-color: #DEDEED;
 }
 
 #contact-icons a {
@@ -381,7 +423,7 @@ form button:hover {
 }
 
 #contact-icons a:hover {
-    color: #BEADFA;
+    color: #DFCCFB;
 }
 
 #msg {
@@ -408,7 +450,7 @@ form button:hover {
     height: 100vh;
     width: 250px;
     z-index: 999;
-    background-color: rgba(181, 126, 220, 0.2);
+    background-color: rgba(23, 23, 54, 0);
 
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
@@ -416,10 +458,11 @@ form button:hover {
     align-items: flex-start;
     justify-content: flex-start;
     padding-left: 10px;
-    gap: 10px;
+    padding-top: 10px;
+    gap: 20px;
     font-size: 18px;
 
-    backdrop-filter: blur(8px);
+    backdrop-filter: blur(10px);
 
 }
 
@@ -486,6 +529,6 @@ form button:hover {
     left: 0;
     height: 100vh;
     width: 100%;
-    background-color: rgb(243, 231, 254);
+    background-color: #00001c;
     z-index: -2;
 }
