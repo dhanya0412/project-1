@@ -1,3 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+
+}
+
+body {
+    background-color: #F4F4FA;
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#header {
+    height: 100vh;
+}
 
 
 
@@ -12,7 +32,7 @@ nav.navigation {
     z-index: 1000;
     background-color: #00001c;
 
-    /backdrop-filter: blur(8px);/
+    /*backdrop-filter: blur(8px);*/
     margin-bottom: 20px;
     height: 9%;
 
@@ -566,8 +586,8 @@ form button:hover {
     }
 
     .tab-titles {
-        /flex-direction: column;/
-        /justify-content: space-around;/
+        /*flex-direction: column;*/
+        /*justify-content: space-around;*/
 
 
     }
